@@ -1,0 +1,14 @@
+<Command xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extension.xsd" Name="PROPOR" Language="Python">
+	<Subcommand Name="" Occurrence="Optional">
+		<Parameter Name="NUM" ParameterType="TokenList"/>
+		<Parameter Name="DENOM" ParameterType="TokenList"/>
+		<Parameter Name="ID" ParameterType="VariableName"/>
+	</Subcommand>
+	<Subcommand Name="DATASET">
+		<Parameter Name="NAME" ParameterType="DatasetName"/>
+	</Subcommand>
+	<Subcommand Name="LEVEL">
+		<Parameter Name="ALPHA" ParameterType="Number"/>
+	</Subcommand>
+	<Subcommand Name="HELP" Occurrence="Optional"/>
+</Command>
