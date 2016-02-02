@@ -1,11 +1,11 @@
 # PROPOR
 ## Produce confidence intervals for proportions
- This procedure produces binomial and Poisson confidence i
+ This procedure produces binomial and Poisson confidence intervals for proportions.  The binomial interval is based on the Jeffreys formula also used in error bar charts.
 
 ---
 Requirements
 ----
-- IBM SPSS Statistics 18 or later
+- IBM SPSS Statistics 18 or later and the corresponding IBM SPSS Statistics-Integration Plug-in for Python.
 
 ---
 Installation intructions
