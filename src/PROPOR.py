@@ -1,4 +1,14 @@
 """Confidence intervals for proportions"""
+#/***********************************************************************
+# * Licensed Materials - Property of IBM
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2020
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp.
+# ************************************************************************/"""Partial Least Squares Regression Module"""
 
 from extension import Template, Syntax, setnegativedefaults
 import spss, spssaux
@@ -70,11 +80,11 @@ def Run(args):
     
     debug = False
     if debug:
-        print args   #debug
-    args = args[args.keys()[0]]
+        print(args)   #debug
+    args = args[list(args.keys())[0]]
     # Note that the keys of args are the names of the subcommands that were given.
     if debug:
-        print args
+        print(args)
     
     # define the syntax
     oobj = Syntax([
@@ -89,8 +99,8 @@ def Run(args):
     
 
    # A HELP subcommand overrides all else
-    if args.has_key("HELP"):
-        print helptext
+    if "HELP" in args:
+        print(helptext)
     else:
         try:
             # parse and execute the command
@@ -103,7 +113,7 @@ def Run(args):
             if debug:
                 raise
             else:
-                print sys.exc_info()[1]
+                print(sys.exc_info()[1])
                 sys.exc_clear()
     
 def dopropor(num=None, denom=None, id=None, dsname="*", alpha=.05, adjust='bonferroni'):
@@ -111,7 +121,7 @@ def dopropor(num=None, denom=None, id=None, dsname="*", alpha=.05, adjust='bonfe
     if num is None or denom is None:
         raise ValueError("Error: NUM and DENOM keywords are required")
     if spss.PyInvokeSpss.IsUTF8mode():
-        unistr = unicode
+        unistr = str
     else:
         unistr = str
 
@@ -219,8 +229,8 @@ def dopropor(num=None, denom=None, id=None, dsname="*", alpha=.05, adjust='bonfe
             zdiffhigh = p1 - p0 + sdvec[i] * zalpha2
         else:
             zdifflow = zdiffhigh = 0.
-        table.SetCellsByRow(CellText.String(idvec[i]), [CellText.Number(v) for v in numvec[i]/denomvec[i], plowbi[i], phighbi[i],
-            plowpois[i], phighpois[i], p1-p0, zdifflow, zdiffhigh])
+        table.SetCellsByRow(CellText.String(idvec[i]), [CellText.Number(v) for v in (numvec[i]/denomvec[i], plowbi[i], phighbi[i],
+            plowpois[i], phighpois[i], p1-p0, zdifflow, zdiffhigh)])
         if i == 0:
             table[(CellText.String(idvec[0]), CellText.String(cols[-3]))] = CellText.String("-")
             table[(CellText.String(idvec[0]), CellText.String(cols[-2]))] = CellText.String("-")
