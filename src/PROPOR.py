@@ -114,7 +114,7 @@ def Run(args):
                 raise
             else:
                 print(sys.exc_info()[1])
-                sys.exc_clear()
+                ### sys.exc_clear()     # Python3 has no such function
     
 def dopropor(num=None, denom=None, id=None, dsname="*", alpha=.05, adjust='bonferroni'):
     
