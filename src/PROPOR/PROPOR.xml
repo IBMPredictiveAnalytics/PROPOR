@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extension xmlns="http://spss.com/clementine/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" debug="false" version="1.0" xsi:schemaLocation="http://spss.com/clementine/extensions http://xml.spss.com/clementine/extensions/CLEFSpecificationFile.xsd">
+  <ExtensionDetails copyright="Licensed Materials - Property of IBM.  IBM SPSS Products: Statistics Common (C) Copyright IBM Corp. 1989, 2013.  US Government Users Restricted Rights - Use, duplication or  disclosure restricted by GSA ADP Schedule Contract with IBM Corp." description="" id="PROPOR" label="" provider="SPSS, Inc." providerTag="spss" version="1.0"/>
+  <Resources>
+    <Bundle id="bundle1" path="PROPOR" type="properties"/>
+  </Resources>
+  <CommonObjects>
+    <Actions>
+      <Action id="PROPOR_action" imagePath="IBMdialogicon.png" label="Proportion Confidence Intervals" labelKey="PROPOR_action.LABEL"/>
+    </Actions>
+  </CommonObjects>
+  <UserInterface>
+    <Controls>
+      <MenuItem action="PROPOR_action" offset="5" showIcon="false" spssMenu="Analyze.analyze_desc_stat"/>
+    </Controls>
+  </UserInterface>
+  <Node id="PROPOR" label="Proportion Confidence Intervals" labelKey="PROPOR.LABEL" type="modelBuilder">
+    <Properties>
+      <Property name="PROPOR" syntax="PROPOR %%num%% %%denom%% %%alpha%%&#10;"/>
+      <Property description="false" name="PROPOR_modal"/>
+      <Property defaultValue="" description="Enter one or more integers for the proportion numerator" descriptionKey="num_tooltip.LABEL" isRequired="true" label="Numerator Count(s):" labelKey="num.LABEL" name="num" syntax="NUM=%%ThisValue%%" valueType="string"/>
+      <Property defaultValue="" description="Enter one or more integers for the proportion denominator" descriptionKey="denom_tooltip.LABEL" isRequired="true" label="Denominator Count(s):" labelKey="denom.LABEL" name="denom" syntax="DENOM=%%ThisValue%%" valueType="string"/>
+      <Property defaultValue=".05" description="Enter a number between 0 and 1" descriptionKey="alpha_tooltip.LABEL" isRequired="true" label="Confidence Level:" labelKey="alpha.LABEL" max="0.500000" min="0.000001" name="alpha" syntax="/LEVEL ALPHA=%%ThisValue%%" valueType="double"/>
+    </Properties>
+    <UserInterface>
+      <Tabs>
+        <Tab helpLink="PROPOR.htm">
+          <PropertiesPanel>
+            <TextBoxControl mnemonic="N" mnemonicKey="num_mnemonic.VALUE" property="num">
+              <Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+            </TextBoxControl>
+            <TextBoxControl mnemonic="D" mnemonicKey="denom_mnemonic.VALUE" property="denom">
+              <Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+            </TextBoxControl>
+            <StaticText text="Enter numerator and denominator.  There must\nbe the same number of entries in each, but\na single entry will be replicated as many\ntimes as needed." textKey="item_8.LABEL">
+              <Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+            </StaticText>
+            <StaticText text="The output is a table showing the C.I. for\neach proportion" textKey="item_9.LABEL">
+              <Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="0.0"/>
+            </StaticText>
+            <TextBoxControl mnemonic="C" mnemonicKey="alpha_mnemonic.VALUE" property="alpha">
+              <Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="4" gridWidth="1" rowWeight="1.0"/>
+            </TextBoxControl>
+            <StaticText text="This dialog was created using a later version of PASW Statistics\nand certain features may not function as intended." textKey="v17_warning.LABEL">
+              <Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="5" gridWidth="1" rowWeight="1.0"/>
+            </StaticText>
+          </PropertiesPanel>
+        </Tab>
+      </Tabs>
+    </UserInterface>
+  </Node>
+</Extension>

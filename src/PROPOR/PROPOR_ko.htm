@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>비율 신뢰구간</title>
+<STYLE TYPE="text/css"> 
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head> 
+<body>
+<h1>비율 신뢰구간</h1>
+이 프로시저는 이항 및 포아송 신뢰구간 및 값 간의 차이로 구성된 표를 생성합니다.
+<p class="bullet">&bull; 이 대화 상자의 입력은 데이터 세트에서 가져오지 않습니다.
+
+
+<p><span class="runinhead">분자 빈도 및 분모 빈도</span> 이 계산을 위한 데이터는
+비율의 분자와 분모입니다. 각 필드에서 빈도가 1일 경우 한 개 행 표가 생성됩니다.
+각 필드에 여러 숫자가 있을 경우 표에 각각에 대한 한 개 행이 생성되고
+각 CI를 첫 번째와 비교합니다.
+<p class="bullet">&bull;
+간단히 말해, 한 필드에 입력된 빈도가 1이고 다른 필드의 빈도는 1보다 클 경우,
+단일 숫자가 필요한 만큼 복제됩니다.
+
+<p>
+<p><span class="runinhead">신뢰수준</span> 구간에 사용할 신뢰수준(알파)을
+0과 1 사이의 숫자로 입력하십시오.
+<p>이항 CI는 오차 막대도표에도 사용되는 제프리스 수식을 사용합니다.
+
+<h2>추가 기능</h2>
+<p>명령문에서 분자 및 분모 빈도를 값으로 사용하는 변수는 실제 빈도 값 대신 분자 및 분모
+지정에 사용할 수 있습니다. 변수는 활성 데이터 세트에 있거나 AGGREGATE를 통해 생성될
+수 있는 다른 데이터 세트에 있을 수 있습니다. 그러면 신뢰구간이 각 케이스에 대해 생성됩니다.
+데이터 통합은 이 프로시저에서 수행하지 않습니다.
+<p>
+이 대화 상자는 PROPOR 확장 명령에 대한 명령문을 생성합니다.
+이 명령에 대한 도움말을 표시하려면 다음 구문을 실행하십시오.
+</p>
+<p class="codeblock">PROPOR /HELP.</p>
+
+
+<h2>요구 사항</h2>
+<p>
+이 대화 상자를 사용하려면 Integration Plug-In for Python 및 PROPOR
+  확장 명령문이 필요합니다.자세한 정보는
+      IBM SPSS Statistics 도움말 시스템의 Core System > 자주 묻는 질문에서
+      통합 플러그인을 얻는 방법을 참조하십시오.
+</p>
+
+
+<p style="font-size:80%;">Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+

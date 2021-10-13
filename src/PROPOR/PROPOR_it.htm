@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Intervalli di confidenza per le proporzioni</title>
+<STYLE TYPE="text/css"> 
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head> 
+<body>
+<h1>Intervalli di confidenza per le proporzioni</h1>
+Questa procedura produce una tabella di intervalli di confidenza binomiali e di
+Poisson e le differenze tra i valori.
+<p class="bullet">&bull;Gli input per questa finestra di dialogo non provengono da un dataset.
+
+
+<p><span class="runinhead">Conteggio(i) numeratori e conteggio(i) denominatori</span> I dati per questo
+calcolo sono il numeratore e il denominatore per una proporzione. Con un conteggio in ciascun
+campo, viene prodotta una tabella di una riga. Con più numeri in ognuna, la tabella presenta una riga
+per ciascuna e fornisce un confronto di ogni intervallo di confidenza con il primo.
+<p class="bullet">&bull; In sintesi, se in un campo viene immesso solo un conteggio ma l'altro
+campo ne ha più di uno, il singolo numero viene replicato tante volte quanto necessario.
+
+<p>
+<p><span class="runinhead">Livello di confidenza</span> Immettere il livello di confidenza (alfa)
+da utilizzare per gli intervalli come un numero compreso tra 0 e 1.
+<p>Gli intervalli di confidenza binomiali utilizzano la formula di Jeffreys utilizzata anche
+per i grafici a barre degli errori.
+
+<h2>Funzioni aggiuntive</h2>
+<p>Nella sintassi, le variabili i cui valori sono conteggi di numeratori e denominatori
+possono essere utilizzati per le specifiche di numeratori e denominatori invece dei valori di
+conteggio effettivi. Le variabili possono essere nel dataset attivo oppure da un altro dataset come
+quello che potrebbe essere prodotto da AGGREGATE.  Viene quindi prodotto un intervallo di confidenza per ciascun caso. Questa procedura non esegue alcuna aggregazione dei dati.
+<p>
+Questa finestra di dialogo genera la sintassi del comando di estensione PROPOR. Per
+visualizzare la guida per questo comando, utilizzare la sintassi riportata di seguito:
+</p>
+<p class="codeblock">PROPOR /HELP.</p>
+
+
+<h2>Requisiti</h2>
+<p>
+Questa finestra di dialogo richiede Integration Plug-In for Python e il comando di estensione PROPOR. Per ulteriori informazioni, consultare Come ottenere i plug-in di integrazione
+in Sistema principale > Domande frequenti nella guida in linea di IBM SPSS Statistics.
+</p>
+
+
+<p style="font-size:80%;">Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+

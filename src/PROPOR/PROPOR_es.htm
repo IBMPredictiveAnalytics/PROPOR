@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Intervalos de confianza de proporción</title>
+<STYLE TYPE="text/css"> 
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head> 
+<body>
+<h1>Intervalos de confianza de proporción</h1>
+Este procedimiento produce una tabla de intervalos de confianza Binomiales y Poisson y diferencias entre valores.
+<p class="bullet">&bull; Las entradas para este diálogo no proceden de un conjunto de datos.
+
+
+<p><span class="runinhead">Recuentos de numerador y recuentos de denominador</span> Los datos para este cálculo son el numerador y el denominador de una proporción.  Con un recuento en cada campo, se produce una tabla de una sola fila.  Con varios números en cada uno, la tabla tiene una fila para cada uno y proporciona una comparación de cada CI y con el primero.
+<p class="bullet">&bull; Para abreviar, si solo se introduce un recuento en un campo pero el otro campo tiene más de un, el número individual se réplica tantas veces como sea necesario.
+
+<p>
+<p><span class="runinhead">Nivel de confianza</span> Introduzca el nivel de confianza (alfa) que se debe utilizar para los intervalos como un número entre 0 y 1.
+<p>Los CI binomiales utilizan la fórmula de Jeffreys, que también se utiliza para los gráficos de barras de errores.
+
+<h2>Características adicionales</h2>
+<p>En la sintaxis, las variables cuyos valores son los recuentos de numerador y de denominador se pueden utilizar para las especificaciones de numerador y denominador en lugar de valores de recuentos reales.  Las variables pueden estar en el conjunto de datos activo o ser de otro conjunto de datos, como uno que puede ser producido por AGGREGATE.  Luego se produce un intervalo de confianza para cada caso.  Este procedimiento no lleva a cabo ninguna agregación de datos.
+<p>
+Este diálogo genera sintaxis para el comando de extensión PROPOR. Para mostrar la ayuda de este comando, ejecute la siguiente sintaxis:
+</p>
+<p class="codeblock">PROPOR /HELP.</p>
+
+
+<h2>Requisitos</h2>
+<p>
+Este diálogo requiere el complemento de integración para Python y el comando de extensión PROPOR.  Si desea más información, consulte Cómo obtener complementos de integración, en Sistema principal &gt; Preguntas más frecuentes en el sistema de ayuda de IBM SPSS Statistics.
+</p>
+
+
+<p style="font-size:80%;">Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+
