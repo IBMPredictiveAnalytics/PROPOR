@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Przedziały ufności proporcji</title>
+<STYLE TYPE="text/css"> 
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head> 
+<body>
+<h1>Przedziały ufności proporcji</h1>
+Ta procedura generuje tabelę przedziałów ufności dwumianowych i Poissona
+oraz różnic między wartościami.
+<p class="bullet">&bull; Dane wejściowe dla tego okna dialogowego nie pochodzą ze zbioru danych.
+
+
+<p><span class="runinhead">Liczebności licznika i mianownika</span> Dane do tego obliczenia to
+licznik i mianownik dla proporcji.  W przypadku jednej liczebności
+w każdym polu powstaje tabela z jednym wierszem.  W przypadku wielu liczebności w każdym polu powstaje tabela z jednym wierszem dla każdej liczebności oraz porównaniem każdego przedziału ufności z pierwszym.
+<p class="bullet">&bull; W skrócie, jeśli w polu wprowadzona jest tylko jedna liczba, ale inne pole zawiera
+więcej niż jedną liczbę, pojedyncza liczba jest powielana wymaganą ilość razy.
+
+<p>
+<p><span class="runinhead">Przedział ufności</span> Wprowadź przedział ufności (alfa),
+który będzie stosowany do przedziałów, jako liczbę z przedziału od 0 do 1.
+<p>Dwumianowe przedziały ufności wykorzystują wzór Jeffreysa, który jest również używany do wykresów słupków błędu.
+
+<h2>Funkcje dodatkowe</h2>
+<p>Zmienne w komendzie, których wartości są liczebnościami licznika i mianownika można wykorzystać do specyfikacji licznika i mianownika zamiast rzeczywistych wartości liczebności.  Zmienne mogą znajdować się w aktywnym zbiorze danych lub w innym zbiorze danych np. zbiorze wygenerowanym w wyniku komendy AGGREGATE.  Następnie dla każdej obserwacji generowany jest przedział ufności.  W procedurze tej nie jest wykonywana agregacja danych.
+<p>
+To okno dialogowe generuje komendę rozszerzającą PROPOR. Aby wyświetlić pomoc dotyczącą tej komendy, uruchom następującą komendę:
+</p>
+<p class="codeblock">PROPOR /HELP.</p>
+
+
+<h2>Wymagania</h2>
+<p>
+To okno dialogowe wymaga zainstalowania wtyczki integracji dla języka Python oraz komendy rozszerzającej PROPOR.  W celu uzyskania dalszych informacji, patrz temat W jaki sposób pobrać
+wtyczki integracyjne, wybierając opcję System główny > Często zadawane pytania w systemie pomocy IBM SPSS Statistics.
+</p>
+
+
+<p style="font-size:80%;">Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+

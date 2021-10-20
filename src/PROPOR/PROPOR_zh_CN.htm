@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>比例置信区间</title>
+<STYLE TYPE="text/css"> 
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head> 
+<body>
+<h1>比例置信区间</h1>
+此过程生成二项和泊松置信区间以及值之间的差值的表。
+<p class="bullet">&bull; 此对话框的输入不来自数据集。
+
+
+<p><span class="runinhead">分子计数和分母计数</span>
+此计算的数据是比例的分子和分母。在每个字段中有一个计数时，将生成包含一行的表。在每个字段中有多个数字时，表将为每个数字包含一行，并提供每个 CI 与第一个数字的比较。
+<p class="bullet">&bull; 作为速记，如果在一个字段中只输入了一个计数，但另一个字段有多个计数，那么会根据需要多次复制单个数字。
+
+<p>
+<p><span class="runinhead">置信度级别</span>
+以 0 到 1 之间的数字形式输入要用于区间的置信度级别 (alpha)。
+<p>二项 CI 使用也用于误差条形图的杰弗里斯公式。
+
+<h2>其他功能部件</h2>
+<p>在语法中，值为分子和分母计数的变量可用于分子和分母规范，而不是实际计数值。这些变量可以位于活动数据集内，也可以来自其他数据集，例如可能由 AGGREGATE 生成的数据集。然后将为每个个案生成置信区间。此过程未执行数据聚集。
+<p>
+此对话框将生成 PROPOR 扩展命令的语法。要显示此命令的帮助，请运行以下语法：</p>
+<p class="codeblock">PROPOR /HELP。</p>
+
+
+<h2>要求</h2>
+<p>
+此对话框需要 Integration Plug-In for Python 和 PROPOR 扩展命令。有关更多信息，请参阅“IBM SPSS Statistics
+帮助”系统的“核心系统”>“常见问题”中的“如何获取集成插件”。</p>
+
+
+<p style="font-size:80%;">Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+

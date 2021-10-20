@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>比例信賴區間</title>
+<STYLE TYPE="text/css"> 
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head> 
+<body>
+<h1>比例信賴區間</h1>
+此程序會產生一個表格，其中包含 Binomial 及 Poisson 信賴區間，以及值之間的差異。
+<p class="bullet">&bull; 此對話框的輸入並非來自資料集。
+
+
+<p><span class="runinhead">分子計數與分母計數</span> 此計算的資料是比例的分子與分母。系統會產生包含一列的表格，每一個欄位中一個計數。每一個表格具有多個數字，針對每一個數字具有一列，並提供每一個 CI 與第一個數字的比較。
+<p class="bullet">&bull; 為了速記，如果在一個欄位中僅輸入一個計數，但是其他欄位具有多個，則會根據需要多次抄寫單一數字。
+<p>
+<p><span class="runinhead">信賴水準</span> 輸入用於間隔的信賴水準 (alpha)，使用介於 0 與 1 之間的數字。
+<p>二項式 CI 使用也用於錯誤長條圖的 Jeffreys 公式。
+
+<h2>其他特性</h2>
+<p>在語法中，值為分子和分母計數的變數可用於分子和分母的規格，而不是實際計數值。變數可以在作用中資料集中，或者來自另一個資料集，例如 AGGREGATE 可能產生的資料集。然後會產生每一個觀察值的信賴區間。此程序不執行任何資料聚集。<p>
+此對話框會產生 PROR 延伸指令的語法。若要顯示此指令的說明，請執行下列語法：</p>
+<p class="codeblock">PROPOR /HELP。</p>
+
+
+<h2>需求</h2>
+<p>
+此對話框需要 Integration Plug-In for Python 及 PROPOR 延伸指令。如需相關資訊，請參閱 IBM SPSS Statistics 說明系統中「核心系統」>「常見問題」下的「如何取得 Integration Plug-In」。</p>
+
+
+<p style="font-size:80%;">Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+

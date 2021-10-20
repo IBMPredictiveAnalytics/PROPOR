@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Intervalos de confiança de proporção</title>
+<STYLE TYPE="text/css"> 
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head> 
+<body>
+<h1>Intervalos de confiança de proporção</h1>
+Este procedimento produz uma tabela de intervalos de confiança Binomial e Poisson e diferenças entre os valores.
+<p class="bullet">&bull; As entradas para essa caixa de diálogo não vêm de um conjunto de dados.
+
+
+<p><span class="runinhead">Contagem(ns) do numerador e contagens do denominador</span> Os dados para esse cálculo são o numerador e o denominador de uma proporção.  Com uma contagem em cada campo, uma tabela de uma linha é produzida.  Com vários números em cada, a tabela tem uma linha para cada e fornece uma comparação de cada IC com o primeiro.
+<p class="bullet">&bull; Em resumo, se apenas uma contagem for inserida em um campo, mas o outro campo tiver mais de uma, o único número será replicado quantas vezes forem necessárias.
+
+<p>
+<p><span class="runinhead">Nível de confiança</span> Insira o nível de confiança (alfa) a ser usado para os intervalos como um número entre 0 e 1.
+<p>Os ICs binomiais usam a fórmula de Jeffrey, que também é usada para gráficos de barras de erros.
+
+<h2>Recursos adicionais</h2>
+<p>Na sintaxe, as variáveis cujos valores são as contagens do numerador e do denominador podem ser usadas para as especificações do numerador e do denominador em vez dos valores reais da contagem.  As variáveis podem estar no conjunto de dados ativo ou em outro conjunto de dados, como aquele que pode ser produzido por AGGREGATE.  Um intervalo de confiança é então produzido para cada caso.  Nenhuma agregação de dados é executada por esse procedimento.
+<p>
+Essa caixa de diálogo gera a sintaxe para o comando de extensão PROPOR. Para exibir ajuda para este comando, execute a seguinte sintaxe:
+</p>
+<p class="codeblock">PROPOR /HELP.</p>
+
+
+<h2>Requisitos</h2>
+<p>
+Essa caixa de diálogo requer o plug-in de integração para Python e o comando de extensão PROPOR.  Para obter informações adicionais, consulte Como Obter Integration Plug-In, no Sistema Principal &gt; Perguntas mais Frequentes no sistema de ajuda do IBM SPSS Statistics Help.
+</p>
+
+
+<p style="font-size:80%;">Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+

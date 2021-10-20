@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Intervalles de confiance de proportions</title>
+<STYLE TYPE="text/css"> 
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head> 
+<body>
+<h1>Intervalles de confiance de proportions</h1>
+Cette procédure génère une table d'intervalles de confiance binomiaux et de Poisson
+et les différences entre les valeurs.
+<p class="bullet">&bull; Les entrées de cette boîte de dialogue ne proviennent pas d'un jeu de données.
+
+
+<p><span class="runinhead">Nombre(s) de numérateurs et Nombre(s) de dénominateurs</span> : Les données de ce calcul sont le numérateur et le dénominateur d'une proportion. Avec un nombre par zone, une table d'une ligne est générée. Avec plusieurs nombres dans chacune, une table contient une ligne par zone et compare chaque intervalle de confiance à la première.
+<p class="bullet">&bull; En bref, si un seul nombre est entré dans une zone, mais que l'autre zone en contient plusieurs, le nombre seul est répliqué autant de fois que nécessaire.
+
+<p>
+<p><span class="runinhead">Niveau de confiance</span> : Entrez le niveau de confiance (alpha) à utiliser pour les intervalles sous forme d'un nombre compris entre 0 et 1.
+<p>Les intervalles de confiance binomiaux utilisent la formule de Jeffreys qui est également utilisée pour les graphiques de barre d'erreur.
+
+<h2>Fonctions supplémentaires</h2>
+<p>Dans la syntaxe, les variables dont les valeurs correspondent aux nombres de numérateurs et de dénominateurs peuvent être utilisées pour les spécifications de numérateur et de dénominateur au lieu des valeurs réelles des nombres. Les variables peuvent se trouver dans le jeu de données actif ou provenir d'un autre jeu de données (par exemple, généré par AGGREGATE). Un intervalle de confiance est alors généré pour chaque observation. Aucune agrégation de données n'est effectuée par cette procédure.
+<p>
+Cette boîte de dialogue génère une syntaxe pour la commande d'extension PROPOR. Pour afficher l'aide de cette commande, exécutez la syntaxe suivante :
+</p>
+<p class="codeblock">PROPOR /HELP.</p>
+
+
+<h2>Conditions requises</h2>
+<p>
+Cette boîte de dialogue requiert le plug-in d'intégration pour Python et la commande d'extension PROPOR. Pour plus d'informations, reportez-vous à
+Comment obtenir des plug-in d'intégration dans Système central > Questions fréquemment posées dans le système d'aide d'IBM SPSS Statistics.
+</p>
+
+
+<p style="font-size:80%;">Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+

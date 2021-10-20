@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>比率の信頼区間</title>
+<STYLE TYPE="text/css"> 
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-size:110%; }
+  TABLE {font-size:100%;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;}
+
+  /* inline tags */
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+
+
+  --> 
+  </style>
+</head> 
+<body>
+<h1>比率の信頼区間</h1>
+このプロシージャは、2 項分布およびポアソン分布の信頼区間と値の差の表を生成します。
+<p class="bullet">&bull; このダイアログに対する入力はデータセットから取得されません。
+
+
+<p><span class="runinhead">「分子の数」および「分母の度数」</span> この計算のためのデータは、比率の分子と分母です。各フィールドに数が 1 つある場合は、1 行の表が作成されます。各行に複数の値がある場合は、それぞれに対して 1 行ずつ存在する表が作成され、それぞれの信頼区間の比較が先頭に入ります。
+<p class="bullet">&bull; 省略表現として、一方のフィールドに数が 1 つしか入力されていないが、他方のフィールドに複数の値が入力されている場合は、その 1 つの値が必要な回数だけ複製されます。
+
+<p>
+<p><span class="runinhead">信頼度レベル</span> 区間に使用する信頼度レベル (アルファ) を 0 から 1 までの数値として入力します。
+<p>2 項信頼区間では、エラー バー グラフにも使用される Jeffreys の式を使用します。
+
+<h2>その他の機能</h2>
+<p>シンタックスでは、実際の度数の値ではなく、分子と分母の数を値とする変数を使用して分子と分母を指定できます。この変数は、アクティブなデータセットに格納することも、別のデータセット (AGGREGATEによって生成できるデータセットなど) から取得することもできます。その上で、ケースごとに信頼区間が計算されます。このプロシージャではデータを集計しません。
+<p>
+このダイアログは、PROPOR 拡張コマンドのシンタックスを生成します。このコマンドのヘルプを表示するには、次のシンタックスを実行します。
+</p>
+<p class="codeblock">PROPOR /HELP</p>
+
+
+<h2>要件</h2>
+<p>
+このダイアログには Integration Plug-In for Python と PROPOR 拡張コマンドが必要です。詳しくは、IBM SPSS Statistics ヘルプ システムの「コア システム」>「よくある質問」の「Integration Plug-In の取得方法」を参照してください。
+</p>
+
+
+<p style="font-size:80%;">Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+

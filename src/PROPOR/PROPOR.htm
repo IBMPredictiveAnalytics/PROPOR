@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Proportion Confidence Intervals</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-family:Verdana, Arial, sans-serif;font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-family:Verdana, Arial, sans-serif;font-size:110%; }
+BODY {font-family:Verdana, Arial, sans-serif;font-size:80%; }
+TABLE {font-size:100%;font-family:Verdana, Arial, sans-serif;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph { font-family: Arial, Helvetica, sans-serif; }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;font-family:"courier new",monospace; }
+
+/* inline tags */
+.code {font-family: Courier,fixed pitch;}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {font-family: Symbol}
+
+--> 
+</STYLE>
+<body>
+<h1>Proportion Confidence Intervals</h1>
+This procedure produces a table of Binomial and Poisson confidence intervals
+and differences between values.
+<p class="bullet">&bull; The inputs for this dialog do not come from a dataset.
+
+
+<p><span class="runinhead">Numerator Count(s) and Denominator Counts</span> The data for this calculation
+are the numerator and denominator for a proportion.  With one count in
+each field, a one row table is produced.  With multiple numbers in each, the table has one row for
+each and provides a comparison of each CI with the first.
+<p class="bullet">&bull; As a shorthand, if only one count is entered in a field but the other field
+has more than one, the single number is replicated as many times as needed.
+
+<p>
+<p><span class="runinhead">Confidence Level</span> Enter the confidence level (alpha)
+to be used for the intervals as a number between 0 and 1.
+<p>The binomial CIs use the Jeffreys formula that is also used for error bar charts.
+
+<h2>Additional Features</h2>
+<p>In syntax, variables whose values are the numerator and denominator counts 
+can be used for the numerator and denominator specifications instead of actual
+count values.  The variables can be in the active dataset or from another dataset such as
+one that might be produced by AGGREGATE.  A confidence interval is then produced for each case.  No data aggregation is performed by this procedure.
+<p>
+This dialog generates syntax for the PROPOR extension command. To display help for this command,
+run the following syntax:
+</p>
+<p class="codeblock">PROPOR /HELP.</p>
+
+
+<h2>Requirements</h2>
+<p>
+This dialog requires the Integration Plug-In for Python and the PROPOR extension command.  For more information, see How to Get Integration Plug-Ins, 
+under Core System > Frequently Asked Questions in the IBM SPSS Statistics Help system.
+</p>
+<br/>
+<hr/>
+<p style="font-family:Verdana, Arial, sans-serif;font-size:80%;">© Copyright IBM Corp. 2009, 2012</p>
+</body>
+</html>
+
