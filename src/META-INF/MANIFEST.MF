@@ -7,7 +7,7 @@ Description: This procedure produces binomial and Poisson confidence i
  ntervals for proportions.  The binomial interval is based on the Jeff
  reys formula also used in error bar charts.
 Author: JKP, IBM SPSS
-Version: 2.0.2
+Version: 2.0.3
 Product-Version: 24
 Date: 11/2012
 Product-Version-Maximum: 99
