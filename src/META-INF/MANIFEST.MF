@@ -1,4 +1,5 @@
 Name: PROPOR
+Display-Name: Confidence Intervals for Proportions
 Dialog-Specs: PROPOR.spd
 Command-Specs: propor.xml
 Code-Files: PROPOR.py
